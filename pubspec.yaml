@@ -1,0 +1,26 @@
+name: game_tic_toe
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.3.4 <4.0.0'
+
+dependencies:
+  avatar_glow: ^3.0.1
+  flutter:
+    sdk: flutter
+  google_fonts: ^6.2.1
+  in_app_purchase: ^3.2.0
+  in_app_purchase_storekit: ^0.3.14
+  onepref: ^0.0.16
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - lib/images/
