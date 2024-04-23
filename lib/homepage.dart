@@ -60,8 +60,16 @@ class _HomePageState extends State<HomePage> {
                         ),
                         Text(
                           ohScore.toString(),
-                          style: myNewFontWhite,
-                        ),
+                          style: GoogleFonts.jacquardaBastarda9(
+                            // changed font
+                            textStyle: TextStyle(
+                                color: ohScore > exScore
+                                    ? Colors.red
+                                    : Colors.white,
+                                letterSpacing: 3,
+                                fontSize: 30),
+                          ),
+                        )
                       ],
                     ),
                   ),
@@ -74,12 +82,20 @@ class _HomePageState extends State<HomePage> {
                           'Player X',
                           style: myNewFontWhite,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         Text(
                           exScore.toString(),
-                          style: myNewFontWhite,
+                          style: GoogleFonts.jacquardaBastarda9(
+                            // changed font
+                            textStyle: TextStyle(
+                                color: exScore > ohScore
+                                    ? Colors.red
+                                    : Colors.white,
+                                letterSpacing: 3,
+                                fontSize: 30),
+                          ),
                         ),
                       ],
                     ),

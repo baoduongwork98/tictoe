@@ -33,8 +33,9 @@ class IntroScreen extends StatefulWidget {
 class _IntroScreenState extends State<IntroScreen>
     with SingleTickerProviderStateMixin {
   static var myNewFont = GoogleFonts.pressStart2p(
-      textStyle: TextStyle(color: Colors.black, letterSpacing: 3));
-  static var myNewFontWhite = GoogleFonts.pressStart2p(
+      textStyle:
+          TextStyle(color: Colors.black, letterSpacing: 3, fontSize: 15));
+  static var myNewFontWhite = GoogleFonts.abel(
       textStyle: TextStyle(
     color: Colors.white,
     letterSpacing: 3,
@@ -56,8 +57,11 @@ class _IntroScreenState extends State<IntroScreen>
                     padding: const EdgeInsets.only(top: 120.0),
                     child: Container(
                       child: Text(
-                        "TIC TAC TOE",
-                        style: myNewFontWhite.copyWith(fontSize: 30),
+                        'TIC TAC TOE',
+                        style: GoogleFonts.jacquesFrancois(
+                          textStyle:
+                              TextStyle(color: Colors.white, fontSize: 30),
+                        ),
                       ),
                     ),
                   ),
@@ -79,10 +83,12 @@ class _IntroScreenState extends State<IntroScreen>
                         child: CircleAvatar(
                           backgroundColor: Colors.grey[900],
                           child: Container(
-                            child: Image.asset(
-                              'lib/images/tictactoelogo.png',
-                              color: Colors.white,
-                              fit: BoxFit.scaleDown,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(50.0),
+                              child: Image.asset(
+                                'lib/images/tictactoelogo.png',
+                                fit: BoxFit.scaleDown,
+                              ),
                             ),
                           ),
                           radius: 80.0,
